@@ -12,8 +12,8 @@ class ContactSerializer(serializers.ModelSerializer):
         return request.user == obj.owner
 
     class Meta:
-        model = Comment
+        model = Contact
         fields = [
             'id', 'owner', 'is_owner', 'profile_id',
-            'post', 'created_at', 'updated_at', 'email' 'content'
+            'created_at', 'updated_at', 'email', 'content'
         ]
