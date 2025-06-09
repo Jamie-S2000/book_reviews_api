@@ -4,6 +4,9 @@ from .serializers import ContactSerializer
 
 
 class ContactList(generics.ListCreateAPIView):
+    '''
+    Lists and creates contact requests
+    '''
     serializer_class = ContactSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Contact.objects.all()
@@ -13,5 +16,8 @@ class ContactList(generics.ListCreateAPIView):
 
 
 class ContactDetail(generics.RetrieveAPIView):
+    '''
+    Retrives contact requests
+    '''
     serializer_class = ContactSerializer
     queryset = Contact.objects.all()

@@ -5,6 +5,9 @@ from .serializers import CommentSerializer, CommentDetailSerializer
 
 
 class CommentList(generics.ListCreateAPIView):
+    '''
+    Lists and creates comments
+    '''
     serializer_class = CommentSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Comment.objects.all()
@@ -14,6 +17,9 @@ class CommentList(generics.ListCreateAPIView):
 
 
 class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
+    '''
+    Retrives, updates and destorys comments
+    '''
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = CommentDetailSerializer
     queryset = Comment.objects.all()

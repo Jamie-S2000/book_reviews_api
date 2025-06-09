@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Post(models.Model):
+    '''
+    Post model related to owner
+    '''
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     book_title = models.CharField(max_length=200, unique=True)
     book_author = models.CharField(max_length=100)
