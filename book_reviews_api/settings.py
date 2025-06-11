@@ -56,7 +56,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-jamies2000-bookreviewsa-5mviu39cob8.ws-eu120.gitpod.io', 'book-review-api-a0026c271264.herokuapp.com/']
+ALLOWED_HOSTS = ['8000-jamies2000-bookreviewsa-5mviu39cob8.ws-eu120.gitpod.io', 'book-review-api-a0026c271264.herokuapp.com']
 
 
 # Application definition
