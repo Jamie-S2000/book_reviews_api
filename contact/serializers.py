@@ -3,7 +3,7 @@ from .models import Contact
 
 
 class ContactSerializer(serializers.ModelSerializer):
-    serializers.ReadOnlyField(source='owner.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
 
